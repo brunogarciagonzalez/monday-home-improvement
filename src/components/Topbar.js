@@ -6,7 +6,7 @@ const Topbar = (props) => (
         <Grid verticalAlign='middle'>
             <Grid.Row>
                 <Grid.Column width={3}>
-                    <button onClick={props.handlePaneOpen}><i class="bars icon"></i></button>
+                    <button style={{backgroundColor: "black", borderRadius: "10px"}} onClick={props.handlePaneOpen}><i class="big inverted bars icon" style={{margin: "0 0 0 0"}}></i></button>
                 </Grid.Column>
 
                 <Grid.Column width={10} className="x">
