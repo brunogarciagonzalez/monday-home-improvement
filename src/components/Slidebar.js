@@ -21,9 +21,9 @@ class Slidebar extends Component {
         return (
             <div ref={ref => this.el = ref}>
                 <SlidingPane
-                    closeIcon={<div>Some div containing custom close icon.</div>}
+                    closeIcon={<div style={{ width: "100%" }}><i class="big arrow left icon"></i></div>}
                     isOpen={this.props.isOpen}
-                    title='Hey, it is optional pane title.  I can be React component too.'
+                    title='Close'
                     from='left'
                     width='300px'
                     onRequestClose={this.props.handleClose}>
