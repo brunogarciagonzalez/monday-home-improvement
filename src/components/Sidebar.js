@@ -42,7 +42,7 @@ class Sidebar extends Component {
         const { activeItem } = this.state;
         
         return (
-            <Menu pointing secondary vertical>
+            <Menu secondary vertical>
                 <Link to="/">
                     <Menu.Item 
                         name='home' 

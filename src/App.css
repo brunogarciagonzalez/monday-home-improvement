@@ -1,0 +1,25 @@
+#menu-img {
+    height: 25px;
+}
+
+#logo-img {
+    height: 40px;
+}
+
+.x {
+    text-align: center;
+
+}
+
+
+.float_center {
+  float: right;
+
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+.float_center > .fc {
+  position: relative;
+  left: 50%;
+}
