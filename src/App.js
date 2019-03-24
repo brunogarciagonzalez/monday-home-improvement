@@ -39,7 +39,7 @@ class App extends Component {
               <Slidebar isOpen={this.state.isPaneOpen} handleOpen={this.handlePaneOpen} handleClose={this.handlePaneClose} />  
             </Grid.Column>
 
-            <Grid.Column width={13}>
+            <Grid.Column width={10}>
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route exact path ="/gallery" component={Gallery}/>
@@ -48,6 +48,8 @@ class App extends Component {
                 <Route exact path="/maintenance" component={Maintenance}/>
               </Switch>
             </Grid.Column>
+
+            <Grid.Column width={3} />
            
           </Grid.Row>
         </Grid>
