@@ -23,7 +23,7 @@ class Slidebar extends Component {
                 <SlidingPane
                     closeIcon={<div style={{ width: "100%" }}><i class="big arrow left icon"></i></div>}
                     isOpen={this.props.isOpen}
-                    title='Close'
+                    title='Menu'
                     from='left'
                     width='300px'
                     onRequestClose={this.props.handleClose}>
