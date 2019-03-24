@@ -34,7 +34,7 @@ class Sidebar extends Component {
             default:
                 this.setState({ activeItem: "/" })
         }
-
+        this.props.handleClose();
     }
     
 
