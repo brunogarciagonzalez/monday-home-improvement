@@ -6,10 +6,10 @@ const Topbar = (props) => (
         <Grid verticalAlign='middle'>
             <Grid.Row>
                 <Grid.Column width={3}>
-                    <button style={{ backgroundColor: "#D21F1B", color: "white", borderRadius: "10px"}} onClick={props.handlePaneOpen}>MENU</button>
+                    <button id="topbar-button" style={{ backgroundColor: "#D21F1B", color: "white", borderRadius: "10px"}} onClick={props.handlePaneOpen}>MENU</button>
                 </Grid.Column>
 
-                <Grid.Column width={10} className="x">
+                <Grid.Column width={10} className="topbar-center">
                         <Header as='h1'> <img src="./company_logo.png" alt="company logo"/>Monday Home Improvement, LLC.</Header>
                 </Grid.Column>
 
