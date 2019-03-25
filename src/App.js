@@ -7,6 +7,7 @@ import "./App.css";
 
 import Slidebar from "./components/Slidebar";
 import Topbar from "./components/Topbar";
+import Footbar from "./components/Footbar";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
@@ -56,6 +57,7 @@ class App extends Component {
             <Grid.Column width={2} />
           </Grid.Row>
         </Grid>
+        <Footbar />
       </div>
     );
   }
