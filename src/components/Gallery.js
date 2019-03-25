@@ -6,7 +6,6 @@ class Gallery extends Component {
   render() {
     return (
       <div>
-        <p>Photo Gallery</p>
         <Tab panes={galleryPanes} menu={{ secondary: true }} />
       </div>
     );
