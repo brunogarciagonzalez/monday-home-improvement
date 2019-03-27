@@ -12,8 +12,12 @@
   font-size: 1.2em;
 }
 
-.topbar-center {
-  text-align: center;
+.topbar-right {
+  text-align: right;
+}
+
+.topbar-left {
+  text-align: left;
 }
 
 .float_center {
