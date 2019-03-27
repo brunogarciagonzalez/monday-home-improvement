@@ -8,7 +8,7 @@ const Footbar = props => (
       <Grid.Row>
         <Grid.Column width={3} />
 
-        <Grid.Column width={10} className="topbar-center">
+        <Grid.Column width={10} className="footbar-center">
           <p>
             Monday Home Improvement, LLC.<br />
             Phone: <a href="tel:13013991094">(301) 399. 1094</a>

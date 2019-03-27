@@ -12,6 +12,10 @@
   font-size: 1.2em;
 }
 
+.footbar-center {
+  text-align: center;
+}
+
 .topbar-right {
   text-align: right;
 }
