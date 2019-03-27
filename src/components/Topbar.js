@@ -60,18 +60,23 @@ class Topbar extends React.Component {
         txtEle.innerHTML += char;
       }, idx * 200);
     });
+
+    // TODO: make period blink until next cycle?
+    // TODO: add cycles
   }
 
   componentDidMount() {
     this.addTagline();
   }
 
+  // could be 4/2/8/2
+  // or 3/2/8/3
   render() {
     return (
       <Segment basic>
         <Grid verticalAlign="middle">
           <Grid.Row>
-            <Grid.Column width={3}>
+            <Grid.Column width={4}>
               <button
                 id="topbar-button"
                 style={{
@@ -102,7 +107,7 @@ class Topbar extends React.Component {
               </Grid.Row>
             </Grid.Column>
 
-            <Grid.Column width={3} />
+            <Grid.Column width={2} />
           </Grid.Row>
         </Grid>
         <hr />
