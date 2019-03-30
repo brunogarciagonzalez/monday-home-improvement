@@ -30,6 +30,13 @@ class App extends Component {
     this.setState({ isPaneOpen: true });
   };
 
+  componentDidMount() {
+    console.log("© 2019 Monday Home Improvement, LLC.");
+    console.log(
+      "Written by the Grace Of GOD by Bruno Garcia Gonzalez (https://bruno.business)"
+    );
+  }
+
   render() {
     return (
       <div className="App">
