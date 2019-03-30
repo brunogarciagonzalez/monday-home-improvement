@@ -22,11 +22,19 @@ class Home extends Component {
           We hope to work with you throughout the entire process of the project.
           This could include helping you select quality products and materials
           at the best prices on the market. Thanks to our friends at{" "}
-          <a href="https://www.ferguson.com/" target="_blank">
+          <a
+            href="https://www.ferguson.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Ferguson
           </a>{" "}
           and{" "}
-          <a href="https://www.daltile.com/" target="_blank">
+          <a
+            href="https://www.daltile.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Daltile
           </a>, we are able to provide you the largest selection of products for
           kitchens and bathrooms.
