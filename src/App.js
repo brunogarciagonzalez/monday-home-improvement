@@ -11,7 +11,7 @@ import Footbar from "./components/Footbar";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 import Maintenance from "./components/Maintenance";
 
 class App extends Component {
@@ -56,7 +56,6 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/gallery" component={Gallery} />
                 <Route exact path="/about" component={About} />
-                <Route exact path="/contact" component={Contact} />
                 <Route exact path="/maintenance" component={Maintenance} />
               </Switch>
             </Grid.Column>
@@ -71,3 +70,5 @@ class App extends Component {
 }
 
 export default App;
+
+// <Route exact path="/contact" component={Contact} />
