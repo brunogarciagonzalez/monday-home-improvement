@@ -7,7 +7,7 @@ class Gallery extends Component {
     return (
       <div>
         <Header as="h2" style={{ textAlign: "center" }}>
-          <span>Photo Gallery</span>
+          Photo Gallery
         </Header>
 
         <Tab panes={galleryPanes} menu={{ secondary: true }} />
