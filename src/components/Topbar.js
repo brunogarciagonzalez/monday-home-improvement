@@ -78,11 +78,13 @@ class Topbar extends React.Component {
           <Grid.Row>
             <Grid.Column width={4}>
               <button
+                type="button"
                 id="topbar-button"
                 style={{
                   backgroundColor: "#D21F1B",
                   color: "white",
-                  borderRadius: "10px"
+                  borderRadius: "10px",
+                  fontWeight: "800"
                 }}
                 onClick={this.props.handlePaneOpen}
               >
