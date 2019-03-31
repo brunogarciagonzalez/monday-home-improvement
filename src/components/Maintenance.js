@@ -54,12 +54,12 @@ class Maintenance extends Component {
             </li>
             <li>Garbage Disposal: Tighten drain connections and fasteners.</li>
             <li>
-              Clothes Washer: Clean water inlet filters; chek hoses and replece
+              Clothes Washer: Clean water inlet filters; check hoses and replece
               them if they are leaking.
             </li>
             <li>
-              Wiring: Chek for frayed cords and wires; repair or replace them as
-              needed.
+              Wiring: Check for frayed cords and wires; repair or replace them
+              as needed.
             </li>
             <li>Range Hood: Wash fan blades and housing.</li>
           </ul>
