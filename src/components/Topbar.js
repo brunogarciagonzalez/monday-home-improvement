@@ -71,9 +71,15 @@ class Topbar extends React.Component {
     // TODO: add cycles
   }
 
-  componentDidMount() {
-    this.addTagline();
+  handleVisibility = e => {
+    if (document.hidden) {
+      this.endImageAnimation();
+    } else {
+      this.startImageAnimation();
+    }
+  };
 
+  startImageAnimation = () => {
     setTimeout(() => {
       this.setState({ isFlipped: !this.state.isFlipped });
     }, 0);
@@ -83,13 +89,23 @@ class Topbar extends React.Component {
         this.setState({ isFlipped: !this.state.isFlipped });
       }, 10000)
     });
-  }
+  };
 
-  componentWillUnmount() {
+  endImageAnimation = () => {
     if (this.state.intervalID) {
       clearInterval(this.state.intervalID);
       this.setState({ intervalID: null });
     }
+  };
+
+  componentDidMount() {
+    this.addTagline();
+    this.startImageAnimation();
+    document.addEventListener("visibilitychange", this.handleVisibility);
+  }
+
+  componentWillUnmount() {
+    this.endImageAnimation();
   }
 
   // could be 4/2/8/2
