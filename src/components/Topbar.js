@@ -1,7 +1,13 @@
 import React from "react";
 import { Segment, Header, Grid } from "semantic-ui-react";
+import ReactCardFlip from "react-card-flip";
 
 class Topbar extends React.Component {
+  state = {
+    isFlipped: false,
+    intervalID: null
+  };
+
   addTagline() {
     let textArr = [
       "K",
@@ -67,6 +73,23 @@ class Topbar extends React.Component {
 
   componentDidMount() {
     this.addTagline();
+
+    setTimeout(() => {
+      this.setState({ isFlipped: !this.state.isFlipped });
+    }, 0);
+
+    this.setState({
+      intervalID: setInterval(() => {
+        this.setState({ isFlipped: !this.state.isFlipped });
+      }, 10000)
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.state.intervalID) {
+      clearInterval(this.state.intervalID);
+      this.setState({ intervalID: null });
+    }
   }
 
   // could be 4/2/8/2
@@ -93,9 +116,20 @@ class Topbar extends React.Component {
             </Grid.Column>
 
             <Grid.Column width={2} className="topbar-right">
-              <Header as="h1">
-                <img src="./company_logo.png" alt="company logo" />
-              </Header>
+              <ReactCardFlip
+                isFlipped={this.state.isFlipped}
+                flipSpeedFrontToBack={4}
+                flipSpeedBackToFront={4}
+                infinite={true}
+                flipDirection="horizontal"
+              >
+                <Header as="h1" key="front">
+                  <img src="./company_logo.png" alt="company logo" />
+                </Header>
+                <Header as="h1" key="back">
+                  <img src="./company_logo.png" alt="company logo" />
+                </Header>
+              </ReactCardFlip>
             </Grid.Column>
 
             <Grid.Column width={8} className="topbar-left">
