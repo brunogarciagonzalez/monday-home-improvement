@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
@@ -41,6 +42,19 @@ class Home extends Component {
         </p>
         <center>
           <p>Visit our photo gallery and get inspired!</p>
+          <Link to="/gallery">
+            <button
+              type="button"
+              style={{
+                backgroundColor: "#D21F1B",
+                color: "white",
+                borderRadius: "10px"
+              }}
+              onClick={console.log}
+            >
+              See Gallery
+            </button>
+          </Link>
         </center>
       </div>
     );
