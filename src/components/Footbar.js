@@ -11,6 +11,7 @@ const Footbar = props => (
         <Grid.Column width={10} className="footbar-center">
           <p>
             Monday Home Improvement, LLC.<br />
+            MHIC #: 128038<br />
             Phone: <a href="tel:13013991094">(301) 399. 1094</a>
             <br />
             8830 Castlebury Court<br />
