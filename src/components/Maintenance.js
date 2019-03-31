@@ -12,17 +12,17 @@ class Maintenance extends Component {
           <p>Monthly</p>
           <ul>
             <li>
-              Fire Extinguisher: Check that it's fully charged; charge or
+              Fire Extinguisher: Check that it is fully charged; charge or
               replace if needed.
             </li>
             <li>Sink/Tubs Stoppers and drain holes: Clean out debris.</li>
-            <li>Garbage Disposal: Flush with hot water and bakig soda.</li>
+            <li>Garbage Disposal: Flush with hot water and baking soda.</li>
             <li>
-              Water Softener: Check water softener salt drum and replinish salt
+              Water Softener: Check water softener salt drum and replenish salt
               if necessary.
             </li>
             <li>
-              Forced Air-Heating Sistem: Change filter once a month if user's
+              Forced Air-Heating System: Change filter once a month if user's
               manual recommends fiberglass filters.
             </li>
           </ul>
@@ -49,12 +49,12 @@ class Maintenance extends Component {
               sinks; replace any (if deteriorating).
             </li>
             <li>
-              Forced Air-Heating Sistem: Change semi-annually if user's manual
+              Forced Air-Heating System: Change semi-annually if user's manual
               recommens high efficiency pleated or HEPA-style filters.
             </li>
             <li>Garbage Disposal: Tighten drain connections and fasteners.</li>
             <li>
-              Clothes Washer: Clean water inlet filters; check hoses and replece
+              Clothes Washer: Clean water inlet filters; check hoses and replace
               them if they are leaking.
             </li>
             <li>
@@ -79,7 +79,7 @@ class Maintenance extends Component {
               deteriorating.
             </li>
             <li>
-              Windowsills, Doorsills, Thresholds:Fill cracks, caulk edges,
+              Windowsills, Doorsills, Thresholds: Fill cracks, caulk edges,
               repaint, replace if needed.
             </li>
             <li>
@@ -124,7 +124,7 @@ class Maintenance extends Component {
             </li>
             <li>
               Outdoor Faucets: If you live in an area with freezing winters,
-              shut off valves to outdoor faucets. Open spigots and drain, Store
+              shut off valves to outdoor faucets. Open spigots and drain, store
               hoses.
             </li>
           </ul>
@@ -136,7 +136,7 @@ class Maintenance extends Component {
               tank be pumped every year.
             </li>
             <li>
-              Main Cleanout Drain: Have a "rooter" professional clean outthe
+              Main Cleanout Drain: Have a "rooter" professional clean out the
               main line, particularly if there are mature trees in your yard
               whose roots could have cracked the pipe in their search for
               moisture.
