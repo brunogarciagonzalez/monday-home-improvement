@@ -1,4 +1,8 @@
 /* all custom CSS for the application */
+button:focus {
+  outline: 0;
+}
+
 #menu-img {
   height: 25px;
 }
