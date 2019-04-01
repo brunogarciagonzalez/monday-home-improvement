@@ -12,6 +12,7 @@ import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import About from "./components/About";
 // import Contact from "./components/Contact";
+import References from "./components/References";
 import Maintenance from "./components/Maintenance";
 
 class App extends Component {
@@ -35,6 +36,26 @@ class App extends Component {
     console.log(
       "Written by the Grace Of GOD by Bruno Garcia Gonzalez (https://bruno.business)"
     );
+
+    if (window.innerWidth <= 600) {
+      setTimeout(() => {
+        alert(
+          "This website is not optimized for small screens. Please use a bigger screen for a better experienced."
+        );
+      }, 0);
+    }
+
+    if (navigator.userAgent.indexOf("Chrome") != -1) {
+      // is Chrome, webpage is optimized for Chrome
+    } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+      // is Firefox, webpage is optimized for Firefox
+    } else {
+      setTimeout(() => {
+        alert(
+          "This website is only optimized for Chrome & Firefox. For best experience, please use one of these two Browsers."
+        );
+      }, 0);
+    }
   }
 
   render() {
@@ -56,6 +77,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/gallery" component={Gallery} />
                 <Route exact path="/about" component={About} />
+                <Route exact path="/references" component={References} />
                 <Route exact path="/maintenance" component={Maintenance} />
               </Switch>
             </Grid.Column>

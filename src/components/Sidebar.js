@@ -27,6 +27,9 @@ class Sidebar extends Component {
       // case 'contact us':
       //     this.setState({ activeItem: "/contact" })
       //     break;
+      case "references":
+        this.setState({ activeItem: "/references" });
+        break;
       case "home maintenance":
         this.setState({ activeItem: "/maintenance" });
         break;
@@ -61,6 +64,14 @@ class Sidebar extends Component {
           <Menu.Item
             name="about us"
             active={activeItem === "/about"}
+            onClick={this.handleItemClick}
+          />
+        </Link>
+
+        <Link to="/references">
+          <Menu.Item
+            name="references"
+            active={activeItem === "/references"}
             onClick={this.handleItemClick}
           />
         </Link>
