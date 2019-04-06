@@ -42,19 +42,19 @@ class App extends Component {
         alert(
           "This website is not optimized for small screens. Please use a bigger screen for a better experienced."
         );
-      }, 0);
+      }, 100);
     }
 
-    if (navigator.userAgent.indexOf("Chrome") != -1) {
+    if (navigator.userAgent.indexOf("Chrome") !== -1) {
       // is Chrome, webpage is optimized for Chrome
-    } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+    } else if (navigator.userAgent.indexOf("Firefox") !== -1) {
       // is Firefox, webpage is optimized for Firefox
     } else {
       setTimeout(() => {
         alert(
           "This website is only optimized for Chrome & Firefox. For best experience, please use one of these two Browsers."
         );
-      }, 0);
+      }, 100);
     }
   }
 
