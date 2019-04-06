@@ -1,6 +1,6 @@
 import React from "react";
 import { Tab } from "semantic-ui-react";
-import Carousel from "./components/Carousel.js";
+import PhotosContainer from "./components/PhotosContainer.js";
 import { bathrooms, kitchens, decks, carpentry } from "./imageLists.js";
 
 export default [
@@ -8,7 +8,7 @@ export default [
     menuItem: { key: "bathrooms", icon: "bath", content: "Bathrooms" },
     render: () => (
       <Tab.Pane>
-        <Carousel images={bathrooms} />
+        <PhotosContainer images={bathrooms} />
       </Tab.Pane>
     )
   },
@@ -16,7 +16,7 @@ export default [
     menuItem: { key: "kitchens", icon: "food", content: "Kitchens" },
     render: () => (
       <Tab.Pane>
-        <Carousel images={kitchens} />
+        <PhotosContainer images={kitchens} />
       </Tab.Pane>
     )
   },
@@ -24,7 +24,7 @@ export default [
     menuItem: { key: "decks", icon: "sun", content: "Decks" },
     render: () => (
       <Tab.Pane>
-        <Carousel images={decks} />
+        <PhotosContainer images={decks} />
       </Tab.Pane>
     )
   },
@@ -32,7 +32,7 @@ export default [
     menuItem: { key: "carpentry", icon: "tree", content: "Carpentry" },
     render: () => (
       <Tab.Pane>
-        <Carousel images={carpentry} />
+        <PhotosContainer images={carpentry} />
       </Tab.Pane>
     )
   }
