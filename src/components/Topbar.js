@@ -108,6 +108,9 @@ class Topbar extends React.Component {
     this.endImageAnimation();
   }
 
+  triggerRedirect = () => {
+    this.props.history.push("/");
+  };
   // could be 4/2/8/2
   // or 3/2/8/3
   render() {
@@ -119,6 +122,7 @@ class Topbar extends React.Component {
               <button
                 type="button"
                 id="topbar-button"
+                className="cursor-pointer"
                 style={{
                   backgroundColor: "#D21F1B",
                   color: "white",
@@ -140,22 +144,40 @@ class Topbar extends React.Component {
                 flipDirection="horizontal"
               >
                 <Header as="h1" key="front">
-                  <img src="./company_logo.png" alt="company logo" />
+                  <img
+                    src="./company_logo.png"
+                    alt="company logo"
+                    onClick={this.triggerRedirect}
+                    className="cursor-pointer"
+                  />
                 </Header>
                 <Header as="h1" key="back">
-                  <img src="./company_logo.png" alt="company logo" />
+                  <img
+                    src="./company_logo.png"
+                    alt="company logo"
+                    onClick={this.triggerRedirect}
+                    className="cursor-pointer"
+                  />
                 </Header>
               </ReactCardFlip>
             </Grid.Column>
 
             <Grid.Column width={8} className="topbar-left">
               <Grid.Row>
-                <Header as="h1">
+                <Header
+                  as="h1"
+                  onClick={this.triggerRedirect}
+                  className="cursor-pointer"
+                >
                   <span id="main-name">Monday Home Improvement, LLC.</span>
                 </Header>
               </Grid.Row>
               <Grid.Row>
-                <p id="tagline" />
+                <p
+                  id="tagline"
+                  onClick={this.triggerRedirect}
+                  className="cursor-pointer"
+                />
               </Grid.Row>
             </Grid.Column>
 

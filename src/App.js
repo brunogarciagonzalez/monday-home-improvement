@@ -61,7 +61,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Topbar handlePaneOpen={this.handlePaneOpen} />
+        <Route
+          path="/"
+          render={routeProps => (
+            <Topbar {...routeProps} handlePaneOpen={this.handlePaneOpen} />
+          )}
+        />
         <Grid>
           <Grid.Row>
             <Grid.Column width={2}>
