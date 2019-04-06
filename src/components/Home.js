@@ -50,6 +50,7 @@ class Home extends Component {
                 color: "white",
                 borderRadius: "10px"
               }}
+              className="cursor-pointer"
               onClick={console.log}
             >
               See Gallery
