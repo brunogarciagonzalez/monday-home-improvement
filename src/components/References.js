@@ -12,7 +12,7 @@ class References extends Component {
         </Header>
         {referencesList.map(ref => {
           return (
-            <div>
+            <div key={ref.author}>
               <Card style={style}>{ref.content}</Card>
               <Header as="h3" />
             </div>
