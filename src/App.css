@@ -16,6 +16,10 @@ button:focus {
   font-size: 1.2em;
 }
 
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
 .footbar-center {
   text-align: center;
 }
