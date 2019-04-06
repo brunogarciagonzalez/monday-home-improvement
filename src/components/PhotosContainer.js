@@ -9,31 +9,41 @@ class PhotosContainer extends Component {
 
     this.state = {
       isOpen: false,
-      modalSrc: null
+      photoIndex: 0
     };
   }
 
   render() {
-    const { isOpen, modalSrc } = this.state;
+    const { isOpen, photoIndex } = this.state;
     const { images } = this.props;
 
     return (
       <div>
         {isOpen && (
           <Lightbox
-            mainSrc={modalSrc}
-            onCloseRequest={() =>
-              this.setState({ isOpen: false, modalSrc: null })
+            mainSrc={images[photoIndex].src}
+            nextSrc={images[(photoIndex + 1) % images.length].src}
+            prevSrc={
+              images[(photoIndex + images.length - 1) % images.length].src
+            }
+            onCloseRequest={() => this.setState({ isOpen: false })}
+            onMovePrevRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + images.length - 1) % images.length
+              })
+            }
+            onMoveNextRequest={() =>
+              this.setState({
+                photoIndex: (photoIndex + 1) % images.length
+              })
             }
           />
         )}
         <Card.Group>
-          {images.map(photo => {
+          {images.map((photo, idx) => {
             return (
               <Card
-                onClick={() =>
-                  this.setState({ isOpen: true, modalSrc: photo.src })
-                }
+                onClick={() => this.setState({ isOpen: true, photoIndex: idx })}
               >
                 <Card.Content>
                   <Image rounded size="medium" src={photo.src} />
