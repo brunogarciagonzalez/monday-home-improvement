@@ -8,8 +8,8 @@ class Home extends Component {
         <p>
           We at Monday Home Improvement, LLC. Would like to thank you for
           considering us for your home improvement goals. Our number one
-          priority is to provide our customers with the highest notch work, work
-          we can stand behind 100%. We are honest, experienced, and experienced.
+          priority is to provide our customers with the highest-notch work: work
+          we can stand behind 100%. We are honest, experienced, and dependable.
           Whether you have $5,000 or $50,000 to spend on your home improvements,
           there are no jobs too big or small! Give us a call today for a free
           estimate.
