@@ -23,10 +23,9 @@ class About extends Component {
         </Card>
         <p>
           Monday Home Improvement, LLC. Was created by Marcos G. Bebeacua (in
-          photo, left) in 2001 to serve customers in Maryland, District of
-          Columbia, and Virginia. Today, Monday Home Improvement, LLC. focuses
-          on providing high quality remodeling services at an affordable price
-          to all of its clients.
+          photo, left) in 2001 to serve customers in Virginia, Maryland, and the
+          District of Columbia. Today, we focus on providing high quality
+          remodeling services at an affordable price to all of our clients.
         </p>
         <p>Maryland Home Improvement Commission (MHIC) Number: 128038</p>
       </div>
