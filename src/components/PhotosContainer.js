@@ -39,7 +39,7 @@ class PhotosContainer extends Component {
             }
           />
         )}
-        <Card.Group>
+        <Card.Group centered>
           {images.map((photo, idx) => {
             return (
               <Card
