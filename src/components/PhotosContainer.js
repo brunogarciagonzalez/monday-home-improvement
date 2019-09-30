@@ -43,7 +43,7 @@ class PhotosContainer extends Component {
           {images.map((photo, idx) => {
             return (
               <Card
-                image
+                key={idx}
                 onClick={() => this.setState({ isOpen: true, photoIndex: idx })}
               >
                 <Card.Content>
