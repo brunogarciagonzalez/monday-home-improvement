@@ -22,7 +22,7 @@ class About extends Component {
           </Header>
         </Card>
         <p>
-          Monday Home Improvement, LLC. Was created by Marcos G. Bebeacua (in
+          Monday Home Improvement, LLC. was created by Marcos G. Bebeacua (in
           photo, left) in 2001 to serve customers in Virginia, Maryland, and the
           District of Columbia. Today, we focus on providing high quality
           remodeling services at an affordable price to all of our clients.
