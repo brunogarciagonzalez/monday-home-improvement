@@ -1,4 +1,46 @@
 /* all custom CSS for the application */
+
+#logo-flex {
+    display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+}
+
+.flip-card {
+  width: 70px;
+  height: 70px;
+  /* padding-right: 100px; */
+  perspective: 1000px;  /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  /*position: relative;  doesn't look needed */
+  width: 100%;
+  height: 100%;
+  transition: transform 2.5s;
+  transform-style: preserve-3d; /* for some reason this line is what makes it flip images rather than just reversing itself */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute; /* this keeps it in place, without it after it flips it moves */
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+  /* background-color: dodgerblue; */
+  /*color: white;*/
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+   height: 70px;
+   width: 70px;
+}
+
 button:focus {
   outline: 0;
 }

@@ -1,63 +1,26 @@
 import React from "react";
 import { Segment, Header, Grid } from "semantic-ui-react";
-import ReactCardFlip from "react-card-flip";
 
 class Topbar extends React.Component {
   state = {
+    firstRun: true,
     isFlipped: false,
     intervalID: null
   };
 
-  addTagline() {
-    let textArr = [
-      "K",
-      "i",
-      "t",
-      "c",
-      "h",
-      "e",
-      "n",
-      "&nbsp;",
-      "&",
-      "&nbsp;",
-      "B",
-      "a",
-      "t",
-      "h",
-      "r",
-      "o",
-      "o",
-      "m",
-      "&nbsp;",
-      "R",
-      "e",
-      "m",
-      "o",
-      "d",
-      "e",
-      "l",
-      "i",
-      "n",
-      "g",
-      "&nbsp;",
-      "S",
-      "p",
-      "e",
-      "c",
-      "i",
-      "a",
-      "l",
-      "i",
-      "s",
-      "t",
-      "s",
-      "."
-    ];
-    // get access to the header, vanilla js
+  addTagline = () => {
+     // get access to the header, vanilla js
     let txtEle = document.getElementById("tagline");
+    let textString = "Kitchen & Bathroom Remodeling Specialists.";
+    let textArr = [ "K", "i", "t", "c", "h", "e", "n", "&nbsp;", "&", "&nbsp;", "B", "a", "t", "h", "r", "o", "o", "m", "&nbsp;", "R", "e", "m", "o", "d", "e", "l", "i", "n", "g", "&nbsp;", "S", "p", "e", "c", "i", "a", "l", "i", "s", "t", "s", "." ];
+    debugger
+    let isIncomplete = txtEle.innerText !== textString;
+    if (isIncomplete && !this.state.firstRun) {
+        return false
+    }
 
     // clear contents, in case this is not first run through
-    txtEle.innerHMTL = "";
+    txtEle.innerHTML = "";
 
     // edit its innerHMTL iteratively
     // editing innerHTML to apply nbsp;
@@ -67,28 +30,31 @@ class Topbar extends React.Component {
       }, idx * 200);
     });
 
-    // TODO: make period blink until next cycle?
-    // TODO: add cycles
+    const updateFirstRun = () => this.setState({firstRun: false});
+    setTimeout(updateFirstRun,0)
   }
 
   handleVisibility = e => {
     if (document.hidden) {
       this.endImageAnimation();
     } else {
-      this.startImageAnimation();
+      this.init();
     }
   };
 
   startImageAnimation = () => {
-    setTimeout(() => {
-      this.setState({ isFlipped: !this.state.isFlipped });
-    }, 0);
-
-    this.setState({
-      intervalID: setInterval(() => {
-        this.setState({ isFlipped: !this.state.isFlipped });
-      }, 10000)
-    });
+    let logoContainer = document.querySelector(".flip-card-inner");
+    const toggleFlipState = () => this.setState({isFlipped: !this.state.isFlipped});
+    // depending on current state , flip 180 or 360
+    if(this.state.isFlipped){
+        toggleFlipState();
+        logoContainer.style.transform = "rotatey(360deg)";
+        logoContainer.style.transitionDuration = "3.5s";
+    } else {
+        toggleFlipState();
+        logoContainer.style.transform = "rotatey(180deg)";
+        logoContainer.style.transitionDuration = "3.5s";
+    }
   };
 
   endImageAnimation = () => {
@@ -98,9 +64,16 @@ class Topbar extends React.Component {
     }
   };
 
-  componentDidMount() {
+  startIntervalAndGetItsID = () => setInterval(this.startImageAnimation, 10000);
+
+  init = () => {
     this.addTagline();
-    this.startImageAnimation();
+    setTimeout(this.startImageAnimation, 500);
+    this.setState({intervalID: this.startIntervalAndGetItsID()});
+  }
+
+  componentDidMount() {
+    this.init();
     document.addEventListener("visibilitychange", this.handleVisibility);
   }
 
@@ -135,31 +108,27 @@ class Topbar extends React.Component {
               </button>
             </Grid.Column>
 
-            <Grid.Column width={2} className="topbar-right">
-              <ReactCardFlip
-                isFlipped={this.state.isFlipped}
-                flipSpeedFrontToBack={4}
-                flipSpeedBackToFront={4}
-                infinite={true}
-                flipDirection="horizontal"
-              >
-                <Header as="h1" key="front">
-                  <img
-                    src="./company_logo.png"
-                    alt="company logo"
-                    onClick={this.triggerRedirect}
-                    className="cursor-pointer"
-                  />
-                </Header>
-                <Header as="h1" key="back">
-                  <img
-                    src="./company_logo.png"
-                    alt="company logo"
-                    onClick={this.triggerRedirect}
-                    className="cursor-pointer"
-                  />
-                </Header>
-              </ReactCardFlip>
+            <Grid.Column width={2} id="logo-flex">
+                <div className="flip-card">
+                    <div className="flip-card-inner">
+                        <div className="flip-card-front">
+                            <img
+                            className="front cursor-pointer"
+                            src="./company_logo.png"
+                            alt="company logo"
+                            onClick={this.triggerRedirect}
+                            />
+                        </div>
+                        <div className="flip-card-back">
+                            <img
+                            className="back cursor-pointer"
+                            src="./company_logo.png"
+                            alt="company logo"
+                            onClick={this.triggerRedirect}
+                            />
+                        </div>
+                    </div>
+                </div>
             </Grid.Column>
 
             <Grid.Column width={8} className="topbar-left">
